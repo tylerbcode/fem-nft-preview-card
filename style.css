@@ -1,0 +1,199 @@
+/* Box sizing */
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  color: var(--color-white);
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Colors */
+
+:root {
+  --color-cyan: #00fff8;
+  --color-soft-blue: #8bacd9;
+
+  --color-white: #ffffff;
+  --color-main-bg: #0d192c;
+
+  --color-card-bg: #15263f;
+  --color-cyan: #00fff8;
+  --color-line: #2e405a;
+}
+
+.color-soft-blue {
+  color: var(--color-soft-blue);
+}
+
+.color-white {
+  color: var(--color-white);
+}
+
+.color-cyan {
+  color: var(--color-cyan);
+}
+
+.color-main-bg {
+  color: var(--color-main-bg);
+}
+
+.color-card-bg {
+  color: var(--color-card-bg);
+}
+.color-line {
+  color: var(--color-line);
+}
+
+body {
+  background-color: var(--color-main-bg);
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* The outer container */
+.backgroundbox {
+  background-color: var(--color-card-bg);
+  padding: 24px;
+  width: 350px;
+  border-radius: 15px;
+}
+
+/* The bit at the end with your name */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+h1 a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: var(--color-cyan);
+}
+
+p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.image-overlay {
+  display: block;
+  background-color: var(--color-cyan);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.icon-view {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: calc(50% - 24px);
+  top: calc(50% - 24px);
+  opacity: 0;
+  z-index: 1;
+}
+
+.image-overlay:hover > .product-image {
+  transition: opacity 0.2s;
+  opacity: 0.5;
+}
+
+.image-overlay:hover .icon-view {
+  transition: opacity 0.2s;
+  opacity: 1;
+}
+
+.price-info {
+  /* background-color: grey; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-info__eth,
+.price-info__time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price-info__eth {
+  font-weight: 600;
+  color: var(--color-cyan);
+}
+
+.price-info__eth::before {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 18px;
+  background-image: url("images/icon-ethereum.svg");
+}
+
+.price-info__time {
+  font-weight: 300;
+  color: var(--color-soft-blue);
+}
+
+.price-info__time::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("images/icon-clock.svg");
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--color-line);
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+/* The Wyvern */
+.creator {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.creator__image {
+  width: 33px;
+  height: 33px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.creator a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+.creator a:hover {
+  color: var(--color-cyan);
+}
